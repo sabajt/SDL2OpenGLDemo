@@ -1,0 +1,21 @@
+// 2048, 1152 big monitor (1.7 ratio)
+// 960, 600 (macbook)
+// Use 960, 540 internal but doesn't seem to matter?
+
+int i = SDL_GetWindowDisplayIndex(gWindow);
+SDL_Rect j;
+SDL_GetDisplayBounds(i, &j);
+int dbw = j.w;
+int dbh = j.h;
+printf("\ndisplay bounds %i, %i\n", dbw, dbh);
+
+int ww, wh;
+SDL_GetWindowSize(gWindow, &ww, &wh);
+printf("\nwindow size %i, %i\n", dbw, dbh);
+
+int glw, glh;
+SDL_GL_GetDrawableSize(gWindow, &glw, &glh);
+printf("\nGL drawable size %i, %i\n", dbw, dbh);
+
+auto dms = DisplayUtils::getCurrentDisplaySize();
+printf("\nGL display mode size %i, %i\n", dms.x, dms.y);

@@ -1,0 +1,26 @@
+#ifndef YawPitchCommand_h
+#define YawPitchCommand_h
+
+#include "Command.h"
+
+class Game;
+
+class YawPitchCommand : public Command
+{
+public:
+    void execute(Game& game, int x, int y);
+};
+
+#endif /* YawPitchCommand_h */
+
+////
+
+#include "YawPitchCommand.h"
+#include "Game.h"
+
+void YawPitchCommand::execute(Game& game, int x, int y)
+{
+    game.relativeMousePos += glm::vec2((float)x, (float)-y);
+}
+
+

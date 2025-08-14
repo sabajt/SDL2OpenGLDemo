@@ -1,0 +1,22 @@
+TODO
+
+- Try rendering in OpenGL
+- Implement spritesheet
+    - https://dev.to/noah11012/using-sdl2-spritesheets-46h5
+    - https://www.aseprite.org/docs/sprite-sheet/
+- Interpolate rendering
+- Input System
+- Camera system w/ rotation
+    - https://lazyfoo.net/tutorials/SDL/30_scrolling/index.php
+- Planet gravity
+    - Falling object (towards middle)
+    - Collision detection general
+    - Grid based collision map + visible objects
+- Low res bitmap font
+- Q.O.L.
+    - Fullscreen
+    - Resolution Picker
+    
+    
+    
+

@@ -1,0 +1,49 @@
+
+void Game::initLevels()
+{
+    // load levels
+//    GameLevel level_1; level_1.Load("level_1", this->windowSizeX, this->windowSizeY / 2);
+//    GameLevel level_2; level_2.Load("level_2", this->windowSizeX, this->windowSizeY / 2);
+//    GameLevel level_3; level_3.Load("level_3", this->windowSizeX, this->windowSizeY / 2);
+//    GameLevel level_4; level_4.Load("level_4", this->windowSizeX, this->windowSizeY / 2);
+//
+//    this->Levels.push_back(level_1);
+//    this->Levels.push_back(level_2);
+//    this->Levels.push_back(level_3);
+//    this->Levels.push_back(level_4);
+//
+//    this->Level = 0;
+}
+
+
+
+From Game.cpp:
+    // Initialize levels
+    // WARNING: textures need to be loaded first... (uses the blocks)
+//    initLevels();
+    
+    // Init player
+//    glm::vec2 playerPos = glm::vec2(
+//        this->windowSizeX / 2.0f - PLAYER_SIZE.x / 2.0f,
+//        this->windowSizeY - PLAYER_SIZE.y
+//    );
+//    Player = new GameObject(playerPos, PLAYER_SIZE, ResourceManager::GetTexture("paddle"));
+
+
+
+Game class members:
+
+// Levels
+std::vector<GameLevel> Levels;
+unsigned int Level;
+
+
+
+Top of Game.h
+
+// Initial size of the player paddle
+const glm::vec2 PLAYER_SIZE(100.0f, 20.0f);
+// Initial velocity of the player paddle
+const float PLAYER_VELOCITY(500.0f);
+
+inline GameObject *Player;

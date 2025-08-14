@@ -1,0 +1,2 @@
+// Load first controller, if any
+controller1 = InputUtils::findFirstController();

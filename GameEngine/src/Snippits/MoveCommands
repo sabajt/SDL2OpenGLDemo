@@ -1,0 +1,71 @@
+#ifndef MoveStartCommand_h
+#define MoveStartCommand_h
+
+#include "Command.h"
+
+class Game;
+
+enum MoveDirection
+{
+    MOVE_NONE,
+    MOVE_FORWARD,
+    MOVE_BACK,
+    MOVE_LEFT,
+    MOVE_RIGHT
+};
+
+class MoveStartCommand : public Command
+{
+public:
+    MoveStartCommand(MoveDirection d) : direction(d) {}
+    
+    MoveDirection direction;
+    void execute(Game& game);
+};
+
+#endif /* MoveStartCommand_h */
+
+/////
+
+#include "MoveStartCommand.h"
+#include "Game.h"
+
+void MoveStartCommand::execute(Game& game)
+{
+    game.movingDir = direction;
+}
+
+/////
+
+#ifndef MoveEndCommand_h
+#define MoveEndCommand_h
+
+#include "Command.h"
+#include "MoveStartCommand.h"
+
+class Game;
+
+class MoveEndCommand : public Command
+{
+public:
+    MoveEndCommand(MoveDirection d) : direction(d) {}
+    
+    MoveDirection direction;
+    void execute(Game& game);
+};
+
+#endif /* MoveEndCommand_h */
+
+/////
+
+#include "MoveEndCommand.h"
+#include "Game.h"
+
+void MoveEndCommand::execute(Game& game)
+{
+    // TODO: helpful to track pressed state after all to implement nice movement
+    // only assign MOVE_NONE if no other directions are currently pressed.
+    // how to resolve conflicting directions? need to be able to leave down + left pressed.
+    game.movingDir = MOVE_NONE;
+}
+

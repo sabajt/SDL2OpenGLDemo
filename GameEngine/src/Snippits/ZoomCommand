@@ -1,0 +1,26 @@
+#ifndef ZoomCommand_h
+#define ZoomCommand_h
+
+#include "Command.h"
+
+class Game;
+
+class ZoomCommand : public Command
+{
+public:
+    void execute(Game& game, int offset);
+};
+
+#endif /* ZoomCommand_h */
+
+///
+
+#include <stdio.h>
+#include "ZoomCommand.h"
+#include "Game.h"
+
+void ZoomCommand::execute(Game& game, int offset)
+{
+    game.relativeScrollOffset += -offset;
+}
+

@@ -1,0 +1,21 @@
+
+float vertices[] = {
+    // Filled in button
+    -0.5f, -0.5f, // left bottom
+    0.5f, 0.5f, // right top
+    -0.5f, 0.5f, // left top
+
+    -0.5f, -0.5f, // left b
+    0.5f, -0.5f, //  right b
+    0.5f, 0.5f //  right t
+};
+
+float vertices[] = {
+    -1.0f, -1.0f, // left bottom
+    1.0f, 1.0f, // right top
+    -1.0f, 1.0f, // left top
+
+    -1.0f, -1.0f, // left b
+    1.0f, -1.0f, //  right b
+    1.0f, 1.0f //  right t
+};

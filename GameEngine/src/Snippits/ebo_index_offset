@@ -1,0 +1,18 @@
+unsigned int indices[verticesLength];
+
+int j = 0;
+for (int i = 0; i < verticesLength; ++i)
+{
+    if (i == (verticesLength - 1))
+    {
+        indices[i] = 0;
+    }
+    else
+    {
+        indices[i] = j;
+        if (i % 2 == 0)
+        {
+            ++j;
+        }
+    }
+}

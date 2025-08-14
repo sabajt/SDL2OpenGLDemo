@@ -1,0 +1,77 @@
+// Zoom
+
+inputCommands[
+    InputUtils::inputCommandKeyForMouseScrolled()
+] = new ZoomCommand();
+
+// Move left
+
+inputCommands[
+    InputUtils::inputCommandKeyForKeycodeDown(SDLK_a)
+] = new MoveStartCommand(MOVE_LEFT);
+
+inputCommands[
+    InputUtils::inputCommandKeyForKeycodeUp(SDLK_a)
+] = new MoveEndCommand(MOVE_LEFT);
+
+inputCommands[
+    InputUtils::inputCommandKeyForButtonDown(SDL_CONTROLLER_BUTTON_DPAD_LEFT)
+] = new MoveStartCommand(MOVE_LEFT);
+
+inputCommands[
+    InputUtils::inputCommandKeyForButtonUp(SDL_CONTROLLER_BUTTON_DPAD_LEFT)
+] = new MoveEndCommand(MOVE_LEFT);
+
+// Move right
+
+inputCommands[
+    InputUtils::inputCommandKeyForKeycodeDown(SDLK_d)
+] = new MoveStartCommand(MOVE_RIGHT);
+
+inputCommands[
+    InputUtils::inputCommandKeyForKeycodeUp(SDLK_d)
+] = new MoveEndCommand(MOVE_LEFT);
+
+inputCommands[
+    InputUtils::inputCommandKeyForButtonDown(SDL_CONTROLLER_BUTTON_DPAD_RIGHT)
+] = new MoveStartCommand(MOVE_RIGHT);
+
+inputCommands[
+    InputUtils::inputCommandKeyForButtonUp(SDL_CONTROLLER_BUTTON_DPAD_RIGHT)
+] = new MoveEndCommand(MOVE_RIGHT);
+
+// Move forward
+
+inputCommands[
+    InputUtils::inputCommandKeyForKeycodeDown(SDLK_w)
+] = new MoveStartCommand(MOVE_FORWARD);
+
+inputCommands[
+    InputUtils::inputCommandKeyForKeycodeUp(SDLK_w)
+] = new MoveEndCommand(MOVE_FORWARD);
+
+inputCommands[
+    InputUtils::inputCommandKeyForButtonDown(SDL_CONTROLLER_BUTTON_DPAD_UP)
+] = new MoveStartCommand(MOVE_FORWARD);
+
+inputCommands[
+    InputUtils::inputCommandKeyForButtonUp(SDL_CONTROLLER_BUTTON_DPAD_UP)
+] = new MoveEndCommand(MOVE_FORWARD);
+
+// Move back
+
+inputCommands[
+    InputUtils::inputCommandKeyForKeycodeDown(SDLK_s)
+] = new MoveStartCommand(MOVE_BACK);
+
+inputCommands[
+    InputUtils::inputCommandKeyForKeycodeUp(SDLK_s)
+] = new MoveEndCommand(MOVE_BACK);
+
+inputCommands[
+    InputUtils::inputCommandKeyForButtonDown(SDL_CONTROLLER_BUTTON_DPAD_DOWN)
+] = new MoveStartCommand(MOVE_BACK);
+
+inputCommands[
+    InputUtils::inputCommandKeyForButtonUp(SDL_CONTROLLER_BUTTON_DPAD_DOWN)
+] = new MoveEndCommand(MOVE_BACK);
